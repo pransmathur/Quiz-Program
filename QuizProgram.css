@@ -1,0 +1,33 @@
+h2{
+  font-family: serif;
+  font-size: 32px;
+  font-weight: bolder;
+  color: #A52A2A;
+}
+
+h1{
+  font-family: serif;
+  font-size: 48px;
+  background-color:#A52A2A;
+  color: white;
+  margin-left: 500px;
+  margin-right: 500px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+input{
+  font-size: 30px;
+  color: #A52A2A;
+}
+
+body{
+  background-color: #FFFACD;
+}
+
+.myDiv{
+  color: black;
+  font-size: 23px;
+  font-style: oblique;
+  font-weight: bold;
+}

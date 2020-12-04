@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>Quiz Program</title>
+      <link rel = "stylesheet" href = "QuizProgram.css">
+    <script>
+    var score = 0;
+    var questionCount = 0;
+    var totalAttempts = 0;
+    var questionOne = "How many wonders of the world are there?";
+    var questionTwo = "How many continents are there?";
+    var questionThree = "Who played Jack in Titanic?";
+
+    function gradeQuiz()
+      {
+        var answer = document.getElementById("answer").value;
+        if(questionCount == 0){
+          if(answer == 7){
+              score = score + 1;
+            }
+            document.getElementById("question").innerHTML = "How many continents are there?";
+
+        }
+          if(questionCount == 1){
+            if(answer == "7"){
+                score = score + 1;
+              }
+              document.getElementById("question").innerHTML = "Who played Jack in Titanic?";
+
+        }
+          if(questionCount == 2){
+            if(answer == "Leonardo DiCaprio"){
+              score = score + 1;
+              }
+                end();
+        }
+        questionCount = questionCount + 1;
+      }
+      function end()
+      {
+            document.getElementById("question").style.visibility = "hidden";
+            document.getElementById("answer").style.visibility = "hidden";
+            document.getElementById("button").style.visibility = "hidden";
+            document.getElementById("final").innerHTML = "Your score: " + score + "/3";
+            document.getElementById("Answer1").innerHTML = "Answer 1: 7";
+            document.getElementById("Answer2").innerHTML = "Answer 2: 7";
+            document.getElementById("Answer3").innerHTML = "Answer 3: Leonardo DiCaprio";
+        }
+    </script>
+
+  </head>
+
+  <div>
+  <center>
+    <h1>Fun Quiz!</h1>
+  </div>
+  <body>
+    <h2>Can you get all of these right?</h2>
+    <div class="myDiv">
+    <span id = "question">How many wonders of the world are there?</span>
+    <input type = "text" id = "answer">
+    <input id = "button" type = "button" value = "Submit" onclick = "gradeQuiz()">
+    <span id= "end">
+      <br>
+    <span id = "final"></span>
+      <br>
+      <br>
+    <span id = "Answer1"></span>
+      <br>
+      <br>
+    <span id = "Answer2"></span>
+      <br>
+      <br>
+    <span id = "Answer3"></span>
+ </span>
+ </div>
+  </body>
+</html>
